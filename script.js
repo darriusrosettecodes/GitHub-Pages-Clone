@@ -2,7 +2,7 @@
 
 //HEADER IMAGE
 const imgElement = document.querySelector('.img-element')
-const images = ['images/img1.png', 'images/img2.png']
+const images = ['img1.png', 'img2.png']
 
 let index = 0;
 imgElement.src = images[index]
