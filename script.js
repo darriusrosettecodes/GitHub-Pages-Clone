@@ -5,7 +5,7 @@ const imgElement = document.querySelector('.img-element')
 const images = ['img1.png', 'img2.png']
 
 let index = 0;
-imgElement.src = images[index]
+imgElement.setAttribute('src', images[index])
 
 function switchIndex() {
     if (index === 0) {
@@ -13,7 +13,7 @@ function switchIndex() {
     } else {
         index = 0;
     } 
-    imgElement.src = images[index]
+    imgElement.setAttribute('src', images[index])
 }
 
 setInterval(switchIndex, 4000);
