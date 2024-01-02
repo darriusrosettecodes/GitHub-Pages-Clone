@@ -162,9 +162,14 @@ const changeSecondProjectTabCard = function(btn1, cards1, btn2, cards2){
 //Lazy loading
 const elementsToObserve = document.querySelectorAll('.card')
 
+elementsToObserve.forEach(function(card){
+    card.classList.add('hidden')
+})
+
 const observerCallBack = function(entries, observer){
     entries.forEach(function(entry){
         if(entry.isIntersecting){
+            entry.target.classList.remove('hidden')
             entry.target.classList.add('fade-in')
             observer.unobserve(entry.target)
         }
